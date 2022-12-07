@@ -1,0 +1,10 @@
+version: '3.7'
+
+services:
+  apache:
+    image: httpd:latest
+    container_name: app-web
+    ports:
+      - 80:80
+    volumes:
+      - ./docker-compose/site:/usr/local/apache2/htdocs
